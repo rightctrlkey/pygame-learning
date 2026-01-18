@@ -15,7 +15,6 @@ def points_won(winner):
         player_points += 1
     reset_ball()
 
-
 def animate_ball():
     global ball_speed_x, ball_speed_y
     ball.x += ball_speed_x
@@ -73,7 +72,7 @@ cpu = pygame.Rect(0,0,15,80)
 cpu.midleft = ((5,screen_height/2))
 
 player = pygame.Rect(0,0,15,80)
-player.midright = ((screen_width - 5,screen_height/2))
+player.midright = ((screen_width,screen_height/2))
 
 player_speed = 0
 ball_speed_x = 6
