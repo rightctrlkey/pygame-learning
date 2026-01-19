@@ -8,7 +8,6 @@ def ball_reset():
     ball_speed_x = 5
     ball_speed_y = 5
 
-
 def ball_animate():
     global ball_speed_x, ball_speed_y, points
     ball.x += ball_speed_x
@@ -22,7 +21,6 @@ def ball_animate():
         points += 1
         time.sleep(0.5)
         ball_reset()
-
 
 def player_animate():
     global player_speed
@@ -46,7 +44,6 @@ def score():
     if lives <= 0:
         pygame.quit()
         sys.exit()
-
 
 screen_width = 700
 screen_height = 500
