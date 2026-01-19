@@ -2,6 +2,10 @@ import pygame, sys, time
 
 pygame.init()
 
+heart1 = pygame.image.load('Graphics/heart.png').convert_alpha()
+heart2 = pygame.image.load('Graphics/heart.png').convert_alpha()
+heart3 = pygame.image.load('Graphics/heart.png').convert_alpha()
+
 def ball_reset():
     global ball_speed_x, ball_speed_y
     ball.midtop = (screen_width/2, 0)
@@ -67,12 +71,14 @@ while True:
     # poaition updating
     ball_animate()
     player_animate()
+    window.blit(heart1, (0,0))
     
 
     # drawing
     window.fill('black')
     pygame.draw.rect(window, (255,255,255), player, border_radius=10)
     pygame.draw.ellipse(window, (255,255,255), ball)
+    
     
 
     pygame.display.update()
